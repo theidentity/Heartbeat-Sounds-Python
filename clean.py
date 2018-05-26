@@ -67,7 +67,7 @@ if __name__ == '__main__':
 	df = pd.concat([df_A,df_B])
 
 	df = clean_labels(df)
-	df = remove_artifact_label(df)
+	# df = remove_artifact_label(df)
 	df = fix_paths(df)
 	df = remove_prefixes(df)
 

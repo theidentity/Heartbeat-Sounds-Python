@@ -13,7 +13,7 @@ def create_folder(path):
 
 def create_folder_skeleton(n_splits):
 	base_folder = 'data/image_folds/'
-	labels = ['extrastole','murmur','normal']
+	labels = ['extrastole','murmur','normal','artifact']
 	for i in range(n_splits):
 		fold_name = 'fold'+str(i+1)+'/'
 		for label in labels:
@@ -63,6 +63,7 @@ def organize_spectrograms_to_folds(folds,n_splits=4):
 	for i in range(n_splits):
 		(train_X,train_y),(test_X,test_y) = folds.next()
 		copy_to_folder(train_X,train_y,i+1,train_set=True)
+		copy_to_folder(test_X,test_y,i+1,train_set=False)
 		# print_counts(train_y)
 		# print_counts(test_y)
 
