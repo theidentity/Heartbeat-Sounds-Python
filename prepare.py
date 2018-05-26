@@ -66,8 +66,6 @@ def organize_spectrograms_to_folds(folds,n_splits=4):
 		# print_counts(train_y)
 		# print_counts(test_y)
 
-
-
 def create_placeholder(base_path):
 	 for root,dirs,files in os.walk(base_path):
 	 	if not dirs:

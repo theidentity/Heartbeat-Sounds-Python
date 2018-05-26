@@ -7,7 +7,13 @@ import librosa
 import numpy as np
 import librosa.display
 import pandas as pd
+import os
 
+
+def create_folder(path):
+	if not os.path.exists(path):
+		print path
+		os.makedirs(path)
 
 def get_quadmesh(wav_path,save_path):
 	
@@ -38,8 +44,12 @@ def get_mel_spectorgram(wav_path,save_path):
 	plt.savefig(save_path+name+'.jpg')
 
 def process_wav(wav_path):
+	create_folder('data/spectrograms/quad_mesh/')
+	create_folder('data/spectrograms/mel/')
 	# get_quadmesh(wav_path,save_path='data/spectrograms/quad_mesh/')
 	get_mel_spectorgram(wav_path,save_path='data/spectrograms/mel/')
+
+
 
 
 
