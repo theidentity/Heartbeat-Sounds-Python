@@ -74,8 +74,8 @@ def create_placeholder(base_path):
 	 		file.write('')
 	 		print root
 
-create_folder_skeleton(n_splits=4)
+create_folder_skeleton(n_splits=2)
 create_placeholder(base_path='data/')
 X,y = get_data()
-folds = split_into_folds(X,y,n_splits=4)
-organize_spectrograms_to_folds(folds,n_splits=4)
+folds = split_into_folds(X,y,n_splits=2)
+organize_spectrograms_to_folds(folds,n_splits=2)
