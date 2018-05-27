@@ -160,7 +160,9 @@ if __name__ == '__main__':
 	df_A = df[indices]
 	df_B = df[~indices]
 
+
 	transfer_normal(df_A)
+	print df_A.shape
 	df_B = augment_rest(df_B)
 
 	df = pd.concat([df_A,df_B])
